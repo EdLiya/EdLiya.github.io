@@ -1,17 +1,17 @@
-title:            hacke2's blog
+title:            A Walke In Clouds 技术博客
 description:      hacke2的前端技术博客,分享自己的技术心得,积累前段技能,汇聚前端之路的点点滴滴。
-disqus_shortname: hacke2
+disqus_shortname: Alex
 reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://www.hacke2.cn
+url:               http://edliya.github.io 
 
 # Owner/author information
 owner:
-  name:           hacke2
-  avatar:         wxl-photo2.jpg
+  name:           Alex
+  avatar:         wolige.jpg
   bio:            "梦想还是要有的，万一实现了呢？"
-  email:          hacke2@qq.com
+  email:          763041363@qq.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
@@ -43,7 +43,7 @@ links:
     url: http://www.hacke2.cn/works
     external: true
 #  - title: GitHub
-#    url: https://github.com/hacke2
+#    url: https://github.com/EdLiya
 #    external: true
     
 
