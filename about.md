@@ -25,8 +25,8 @@ share: true
 
 ``` 
 "weibo": "@hacke2",
-"github": "@hacke2",
-"mail": "hacke2cn@gmail.com"
+"github": "",
+"mail": ""
 ```
 
   },
@@ -41,7 +41,7 @@ share: true
 
 
 
-`任性的`扫一下吧~ ^_^
+<!--`任性的`扫一下吧~ ^_^
 
 <figure>
 
@@ -55,4 +55,4 @@ share: true
 
   <figcaption>我的支付宝</figcaption>
 
-</figure>
+</figure>-->
