@@ -1,32 +1,24 @@
-# About
+个人前端博客
+----------
+[![release](https://img.shields.io/badge/release-v1.2.0-orange.svg)](https://github.com/hacke2/hacke2.github.io/releases) [![issues](https://img.shields.io/github/issues/hacke2/hacke2.github.io.svg)](https://github.com/hacke2/hacke2.github.io/issues) [![forks](https://img.shields.io/github/forks/hacke2/hacke2.github.io.svg)](https://github.com/hacke2/hacke2.github.io/network) [![stars](https://img.shields.io/github/stars/hacke2/hacke2.github.io.svg)](https://github.com/hacke2/hacke2.github.io/stargazers) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hacke2/hacke2.github.io/blob/master/LICENSE)
 
-This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
+## [点此访问 www.hacke2.cn](http://www.hacke2.cn)
 
-You can visit [here](http://gaohaoyang.github.io) to see this blog.
+本博客是基于[hpstr jekyll]("https://github.com/hacke2/hpstr-jekyll-theme)而搭建的个人博客，在原有强大的功能上，做了如下修改：
 
----
+* 将google cdn换成 baidu cdn 原因你懂的
+* 去掉分享到twitter、facebook等国外社区，加入百度分享
+* 加入百度站长助手，方便您的统计
+* disqus评论
+* Read More功能，不想像以前一样文章全显示出来
 
-这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
+如果您想快速搭建和我一样属于自己的博客系统，请参阅：
 
-博客访问地址：[点击这里](http://gaohaoyang.github.io)
+[30秒创建Github Page](http://www.hacke2.cn/create-github-page/)
 
-**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
+目前待优化事项：
 
-<!--
+* 合并资源（JS,CSS）
 
-## 被引用信息
-
-使用了我的模板并写明来源的人：   
-
-* [dreamholy](http://dreamholy.github.io/)
-
-没有注明来源的人：
-
-* [yangshuailing](http://yangshuailing.github.io/com/)
-* [huapu728](http://huapu728.github.io/)
-* [greatbuger](http://greatbuger.github.io/) 
-
-
--->
 
 
