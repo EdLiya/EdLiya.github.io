@@ -1,4 +1,4 @@
-title:            A Walke In Clouds 技术博客
+title:            A Walke In Clouds 
 description:      hacke2的前端技术博客,分享自己的技术心得,积累前段技能,汇聚前端之路的点点滴滴。
 disqus_shortname: Alex
 reading_time:     true
@@ -8,7 +8,7 @@ url:               http://edliya.github.io
 
 # Owner/author information
 owner:
-  name:           Alex
+  name:           EdLiya
   avatar:         wolige.jpg
   bio:            "梦想还是要有的，万一实现了呢？"
   email:          763041363@qq.com
