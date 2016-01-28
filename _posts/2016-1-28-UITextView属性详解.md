@@ -1,3 +1,14 @@
+---
+layout: post
+title: UITextView属性详解
+description: "2015回顾"
+tags: [Javascript, ES6]
+image:
+  background: witewall_3.png
+comments: true
+share: true
+---
+
 ## 图文混排时注意
 
 图文混排时, **`UITextView`**的`text`和`attributedText`这两个属性会相互冲突。
@@ -31,3 +42,6 @@ NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] in
 self.textView.attributedText = attributedText;
 ```
 
+![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
+
+**文章来自 [{{ site.url }}]({{ site.url }})**
