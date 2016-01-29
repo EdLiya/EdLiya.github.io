@@ -78,7 +78,7 @@ NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] in
 [attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
 
 self.textView.attributedText = attributedText;
-
+{% endhighlight %}
 
 
 
