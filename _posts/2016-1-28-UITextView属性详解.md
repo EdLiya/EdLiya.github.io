@@ -14,7 +14,9 @@ share: true
 图文混排时, **`UITextView`**的`text`和`attributedText`这两个属性会相互冲突。
 
 根据文档说明
+
 <!--more-->
+
 **text**
 
 > In iOS 6 and later, assigning a new value to this property also **replaces the value of the attributedText property with the same text**, albeit without any inherent style attributes. Instead the text view styles the new string using the **font**, **textColor**, and other style-related properties of the class.
@@ -33,13 +35,18 @@ share: true
 
  attributedText的文字大小由- addAttribute:value:range:方法决定;
 
-{% highlight JavaScript %}
+{% highlight Objective-C %}
+
 // 获得textView之前的富文本内容
+
 NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
+
 // 然后统一对整段文本设置样式
+
 [attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
 
 self.textView.attributedText = attributedText;
+
 {% endhighlight %}
 
 ![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
