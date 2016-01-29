@@ -51,7 +51,9 @@ self.textView.attributedText = attributedText;
 
 ![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
 
-```
+Objective-C
+
+{% highlight Objective-C %}
 NSString *str = [[NSString alloc] init];
 str = @"你好";
 UIView *view = [[UIView alloc] init];
@@ -62,10 +64,22 @@ int a = 5
 str = @"你好";
 UIView *view = [[UIView alloc] init];
 CGFloat
-```
+{% endhighlight %}
 
-<link rel="stylesheet" href="/Users/zhangyangyan/Documents/MyBlog/RS/highlight/styles/xcode.css">
-<script src="/Users/zhangyangyan/Documents/MyBlog/RS/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+## 测试
+{% highlight Objective-C %}
+
+// 获得textView之前的富文本内容
+
+NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
+
+// 然后统一对整段文本设置样式
+
+[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
+
+self.textView.attributedText = attributedText;
+
+
+
 
 **文章来自 [{{ site.url }}]({{ site.url }})**
