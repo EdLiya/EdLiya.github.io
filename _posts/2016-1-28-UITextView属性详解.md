@@ -35,7 +35,7 @@ share: true
 
  attributedText的文字大小由- addAttribute:value:range:方法决定;
 
-{% highlight Objective-C %}
+{% highlight JavaScript %}
 
 // 获得textView之前的富文本内容
 
@@ -50,5 +50,22 @@ self.textView.attributedText = attributedText;
 {% endhighlight %}
 
 ![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
+
+```
+NSString *str = [[NSString alloc] init];
+str = @"你好";
+UIView *view = [[UIView alloc] init];
+int a = 4;
+long b = 2;
+NSString *str = [[NSString alloc] iniy];
+int a = 5
+str = @"你好";
+UIView *view = [[UIView alloc] init];
+CGFloat
+```
+
+<link rel="stylesheet" href="/Users/zhangyangyan/Documents/MyBlog/RS/highlight/styles/xcode.css">
+<script src="/Users/zhangyangyan/Documents/MyBlog/RS/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 **文章来自 [{{ site.url }}]({{ site.url }})**
