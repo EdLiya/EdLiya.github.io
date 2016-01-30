@@ -67,8 +67,7 @@ CGFloat
 {% endhighlight %}
 
 ## 测试
-{% highlight Objective-C %}
-
+```
 // 获得textView之前的富文本内容
 
 NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
@@ -78,7 +77,7 @@ NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] in
 [attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
 
 self.textView.attributedText = attributedText;
-{% endhighlight %}
+```
 
 ```
 // 获得textView之前的富文本内容
