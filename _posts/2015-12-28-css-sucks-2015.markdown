@@ -85,7 +85,7 @@ CSS is *always bundled* with components<br>(from loading, mount to unmount)
 require('./PageA.scss');
 ```
 
-```Objective-C
+```
 NSString *str = [[NSString alloc] init];
 str = @"你好";
 UIView *view = [[UIView alloc] init];
