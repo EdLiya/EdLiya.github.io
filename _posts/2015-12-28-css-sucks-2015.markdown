@@ -85,6 +85,21 @@ CSS is *always bundled* with components<br>(from loading, mount to unmount)
 require('./PageA.scss');
 ```
 
+```Objective-C
+NSString *str = [[NSString alloc] init];
+str = @"你好";
+UIView *view = [[UIView alloc] init];
+int a = 4;
+long b = 2;
+NSString *str = [[NSString alloc] iniy];
+int a = 5
+str = @"你好";
+UIView *view = [[UIView alloc] init];
+CGFloat
+```
+
+
+
 - *#Page* for absolutely scoping between pages
 - *.pagelet-name* should be lowercase to prevent conflicting with components
 
