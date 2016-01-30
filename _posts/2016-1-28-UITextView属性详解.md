@@ -80,6 +80,18 @@ NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] in
 self.textView.attributedText = attributedText;
 {% endhighlight %}
 
+```
+// 获得textView之前的富文本内容
+
+NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
+
+// 然后统一对整段文本设置样式
+
+[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
+
+self.textView.attributedText = attributedText;
+```
+
 
 
 **文章来自 [{{ site.url }}]({{ site.url }})**
