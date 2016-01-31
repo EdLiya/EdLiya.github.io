@@ -75,11 +75,11 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "天镶的博客",
+        title: “百度”,
         href: "https://www.baidu.com"
     },{
-        title: "Luke的自留地",
-        href: "http://hmqk1995.github.io"
+        title: “Google",
+        href: "https://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp&gws_rd=ssl"
     },{
         title: "Ebn's Blog",
         href: "http://ebnbin.com/"
