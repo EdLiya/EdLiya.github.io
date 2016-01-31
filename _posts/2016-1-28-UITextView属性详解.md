@@ -1,5 +1,5 @@
 ---
-layout: keynote
+layout: post
 title: UITextView属性详解
 description: "2015回顾"
 tags: [Javascript, ES6]
