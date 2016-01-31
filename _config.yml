@@ -76,9 +76,9 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 friends: [
     {
         title: “百度”,
-        href: “www.baidu.com”
+        href: “https://www.baidu.com”
     },{
         title: “谷歌”,
-        href: “www.google.cn”
+        href: “http://www.google.cn”
     }
 ]

@@ -1,12 +1,13 @@
 ---
-layout: post
-title: UITextView属性详解
-description: "2015回顾"
-tags: [Javascript, ES6]
-image:
-  background: witewall_3.png
-comments: true
-share: true
+layout:     post
+title:      "UITextView属性详解"
+subtitle:   "图文混排"
+date:       2016-01-31
+author:     "ZSW"
+header-img: "img/post-bg-js-module.jpg"
+tags:
+    - iOS
+    - UITextView
 ---
 
 ## 图文混排时注意
@@ -14,8 +15,6 @@ share: true
 图文混排时, **`UITextView`**的`text`和`attributedText`这两个属性会相互冲突。
 
 根据文档说明
-
-<!--more-->
 
 **text**
 
@@ -33,51 +32,9 @@ share: true
 
 因为text文字的大小交由font属性决定;
 
- attributedText的文字大小由- addAttribute:value:range:方法决定;
+attributedText的文字大小由- addAttribute:value:range:方法决定;
 
-{% highlight JavaScript %}
 
-// 获得textView之前的富文本内容
-
-NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
-
-// 然后统一对整段文本设置样式
-
-[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
-
-self.textView.attributedText = attributedText;
-
-{% endhighlight %}
-
-![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
-
-Objective-C
-
-{% highlight Objective-C %}
-NSString *str = [[NSString alloc] init];
-str = @"你好";
-UIView *view = [[UIView alloc] init];
-int a = 4;
-long b = 2;
-NSString *str = [[NSString alloc] iniy];
-int a = 5
-str = @"你好";
-UIView *view = [[UIView alloc] init];
-CGFloat
-{% endhighlight %}
-
-## 测试
-```
-// 获得textView之前的富文本内容
-
-NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
-
-// 然后统一对整段文本设置样式
-
-[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
-
-self.textView.attributedText = attributedText;
-```
 
 ```
 // 获得textView之前的富文本内容
@@ -90,7 +47,12 @@ NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] in
 
 self.textView.attributedText = attributedText;
 ```
+
+> 测试图片
+> ![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
 
 
 
 **文章来自 [{{ site.url }}]({{ site.url }})**
+
+
