@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+*{margin:0;padding:0;}
+body {
+	font:13.34px helvetica,arial,freesans,clean,sans-serif;
+	color:black;
+	line-height:1.4em;
+	background-color: #F8F8F8;
+	padding: 0.7em;
+}
+p {
+	margin:1em 0;
+	line-height:1.5em;
+}
+table {
+	font-size:inherit;
+	font:100%;
+	margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+pre {
+	margin:1em 0;
+	font-size:12px;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+	padding:0;
+	font-size:12px;
+	background-color:#eee;
+	border:none;
+}
+code {
+	font-size:12px;
+	background-color:#f8f8ff;
+	color:#444;
+	padding:0 .2em;
+	border:1px solid #dedede;
+}
+img{border:0;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>图文混排时注意</title>
+
+</head>
+<body>
+<hr />
+
+<p>layout: post
+title: UITextView属性详解
+description: "2015回顾"
+tags: [Javascript, ES6]
+image:
+  background: witewall_3.png
+comments: true</p>
+
+<h2>share: true</h2>
+
+<h2>图文混排时注意</h2>
+
+<p>图文混排时, <strong><code>UITextView</code></strong>的<code>text</code>和<code>attributedText</code>这两个属性会相互冲突。</p>
+
+<p>根据文档说明</p>
+
+<!--more-->
+
+
+<p><strong>text</strong></p>
+
+<blockquote><p>In iOS 6 and later, assigning a new value to this property also <strong>replaces the value of the attributedText property with the same text</strong>, albeit without any inherent style attributes. Instead the text view styles the new string using the <strong>font</strong>, <strong>textColor</strong>, and other style-related properties of the class.</p>
+
+<p><strong>简译：</strong>对这个属性赋新值会以相同文本更换原有的<code>attributedText</code>下的属性，TextView会以 <strong>font</strong>, <strong>textColor</strong>和其它相近的属性重新更换文本样式</p></blockquote>
+
+<p><strong>attributedText</strong></p>
+
+<blockquote><p>This property is <strong>nil</strong> by default. Assigning a new value to this property also <strong>replaces the value of the text property with the same string data</strong>, albeit without any formatting information. In addition, assigning a new a value updates the values in the font, textColor, and textAlignment properties so that they reflect the style information starting at location 0 in the attributed string.</p>
+
+<p><strong>简译：</strong>默认为nil,对这个属性赋新值会以相同文本更换原有<code>text</code>下的属性</p>
+
+<p>就是会影响全部的attributed string.</p></blockquote>
+
+<p>因为text文字的大小交由font属性决定;</p>
+
+<p> attributedText的文字大小由- addAttribute:value:range:方法决定;</p>
+
+<p>{% highlight JavaScript %}</p>
+
+<p>// 获得textView之前的富文本内容</p>
+
+<p>NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];</p>
+
+<p>// 然后统一对整段文本设置样式</p>
+
+<p>[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];</p>
+
+<p>self.textView.attributedText = attributedText;</p>
+
+<p>{% endhighlight %}</p>
+
+<p><img src="http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG" alt="11" /></p>
+
+<p>Objective-C</p>
+
+<p>{% highlight Objective-C %}
+NSString <em>str = [[NSString alloc] init];
+str = @"你好";
+UIView </em>view = [[UIView alloc] init];
+int a = 4;
+long b = 2;
+NSString <em>str = [[NSString alloc] iniy];
+int a = 5
+str = @"你好";
+UIView </em>view = [[UIView alloc] init];
+CGFloat
+{% endhighlight %}</p>
+
+<h2>测试</h2>
+
+<pre><code>// 获得textView之前的富文本内容
+
+NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
+
+// 然后统一对整段文本设置样式
+
+[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
+
+self.textView.attributedText = attributedText;
+</code></pre>
+
+<pre><code>// 获得textView之前的富文本内容
+
+NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
+
+// 然后统一对整段文本设置样式
+
+[attributedText addAttribute:NSFontAttributeName value:self.textView.font range:NSMakeRange(0, attributedText.length)];
+
+self.textView.attributedText = attributedText;
+</code></pre>
+
+<p><strong>文章来自 <a href="{{%20site.url%20}}">{{ site.url }}</a></strong></p>
+</body>
+</html>
