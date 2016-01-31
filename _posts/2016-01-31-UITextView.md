@@ -4,11 +4,13 @@ title:      "UITextView属性详解"
 subtitle:   "图文混排"
 date:       2016-01-31
 author:     "ZSW"
-header-img: "img/post-bg-js-module.jpg"
+header-img: "img/post-bg-2015.jpg"
 tags:
     - iOS
     - UITextView
 ---
+
+[TOC]
 
 ## 图文混排时注意
 
@@ -36,7 +38,7 @@ attributedText的文字大小由- addAttribute:value:range:方法决定;
 
 
 
-```
+``` 
 // 获得textView之前的富文本内容
 
 NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
@@ -48,11 +50,13 @@ NSMutableAttributedString *attributedText= [[NSMutableAttributedString alloc] in
 self.textView.attributedText = attributedText;
 ```
 
+## 测试标题二
+
 > 测试图片
+> 
 > ![11](http://7xqkdo.com1.z0.glb.clouddn.com/IMG_0041.JPG)
 
-
+## 测试标题三
 
 **文章来自 [{{ site.url }}]({{ site.url }})**
-
 
