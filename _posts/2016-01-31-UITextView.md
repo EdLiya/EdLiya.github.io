@@ -4,13 +4,13 @@ title:      "UITextView属性详解"
 subtitle:   "图文混排"
 date:       2016-01-31
 author:     "ZSW"
-header-img: "img/post-bg-2015.jpg"
+header-img: ""
 tags:
     - iOS
     - UITextView
 ---
 
-[TOC]
+
 
 ## 图文混排时注意
 
@@ -59,4 +59,3 @@ self.textView.attributedText = attributedText;
 ## 测试标题三
 
 **文章来自 [{{ site.url }}]({{ site.url }})**
-

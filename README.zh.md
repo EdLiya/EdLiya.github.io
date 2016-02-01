@@ -1,6 +1,5 @@
 # Hux blog 模板
 
-### [我的博客在这里 &rarr;](http://huxpro.github.io)
 
 ### [在这里预览模板 &rarr;](http://huangxuan.me/huxblog-boilerplate/)
 
