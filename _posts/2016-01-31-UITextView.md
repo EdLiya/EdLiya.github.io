@@ -4,7 +4,7 @@ title:      "UITextView属性详解"
 subtitle:   "图文混排"
 date:       2016-01-31
 author:     "ZSW"
-header-img: "img/post-bg-apple.jpg"
+header-img: "http://7xqkdo.com1.z0.glb.clouddn.com/apple-logo-1.jpg"
 tags:
     - iOS
     - UITextView
