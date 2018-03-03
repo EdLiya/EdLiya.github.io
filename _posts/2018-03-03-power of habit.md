@@ -6,7 +6,7 @@ date:       2018-03-03
 author:     "ZSW"
 header-img: "img/home-bg.jpg"
 tags:
-    - 生活
+    - article
     - diary
 ---
 
